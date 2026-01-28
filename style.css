@@ -1,57 +1,201 @@
+/* General */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: #f5f7fa;
   color: #333;
 }
 
-header {
-  background: #004080;
-  color: white;
-  padding: 15px;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(0, 64, 128, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-header h1 {
-  margin: 0;
+.navbar .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
-nav a {
-  color: white;
-  margin-right: 15px;
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li a {
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
+.navbar .nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* Hero */
 .hero {
-  background: #cce0ff;
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1581091215364-4885f558ef50?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
   padding: 50px 20px;
+  color: #fff;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero-overlay h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background: #ffcc00;
+  color: #004080;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+/* Features and cards */
+.features, .content {
+  padding: 80px 20px;
   text-align: center;
 }
 
-.features, .content {
-  padding: 20px;
-  max-width: 800px;
+.feature-cards, .service-cards, .contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f0f4f8;
+  padding: 30px;
+  border-radius: 15px;
+  width: 250px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #004080;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+/* About Page */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 80px 20px;
+}
+
+.about-image img {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.about-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Tracking page */
+.tracking-card {
+  background: #fff;
+  max-width: 500px;
   margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-button {
+.tracking-card input {
+  padding: 10px;
+  width: 70%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.tracking-card button {
   margin: 5px;
-  padding: 8px 12px;
-  background: #004080;
-  color: white;
+  padding: 8px 15px;
   border: none;
+  background: #004080;
+  color: #fff;
+  border-radius: 20px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-button:hover {
+.tracking-card button:hover {
   background: #0066cc;
 }
 
+.status.In-Transit { color: blue; font-weight: 700; }
+.status.Delivered { color: green; font-weight: 700; }
+.status.On-Hold { color: orange; font-weight: 700; }
+.status.Cancelled { color: red; font-weight: 700; }
+
+/* Footer */
 footer {
   background: #004080;
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 15px 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

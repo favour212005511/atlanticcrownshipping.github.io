@@ -3,31 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Atlantic Crown Shipping</title>
+  <title>Track Shipment - Atlantic Crown Shipping</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Atlantic Crown Shipping</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a href="tracking.html">Track Shipment</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar">
+      <div class="logo">Atlantic Crown Shipping</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="tracking.html">Track Shipment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="content">
-    <h2>Our Services</h2>
-    <ul>
-      <li>International Freight Shipping</li>
-      <li>Express Courier Services</li>
-      <li>Customs Clearance Assistance</li>
-      <li>Package Tracking & Status Updates</li>
-      <li>Door-to-Door Delivery Worldwide</li>
-    </ul>
+  <section class="content tracking-content">
+    <h2>Track Your Shipment</h2>
+    <div class="tracking-card">
+      <input type="text" id="trackingNumber" placeholder="Enter Tracking Number" />
+      <button onclick="checkStatus()">Track</button>
+      <div id="statusDisplay">
+        <p>Status will appear here.</p>
+      </div>
+
+      <h3>Update Shipment Status (Admin)</h3>
+      <button onclick="updateStatus('On Hold')">On Hold</button>
+      <button onclick="updateStatus('In Transit')">In Transit</button>
+      <button onclick="updateStatus('Delivered')">Delivered</button>
+      <button onclick="updateStatus('Cancelled')">Cancelled</button>
+    </div>
   </section>
+
+  <script src="tracking.js"></script>
 
   <footer>
     <p>&copy; 2026 Atlantic Crown Shipping | Manchester, England</p>
