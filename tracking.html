@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Shipment - Atlantic Crown Shipping</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">Atlantic Crown Shipping</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="tracking.html">Track Shipment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="tracking-section">
+  <div class="tracking-card">
+    <h2>Track Your Shipment</h2>
+    <input type="text" id="trackingNumber" placeholder="Enter Tracking Number"/>
+    <button onclick="checkStatus()">Track</button>
+    <div id="statusDisplay">
+      <p>Status will appear here.</p>
+    </div>
+  </div>
+</section>
+
+<script src="tracking.js"></script>
+<footer>
+  <p>&copy; 2026 Atlantic Crown Shipping | Manchester, England</p>
+</footer>
+</body>
+</html>

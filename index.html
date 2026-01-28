@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlantic Crown Shipping</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav class="navbar">
+    <div class="logo">Atlantic Crown Shipping</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="tracking.html">Track Shipment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Slider -->
+<section class="hero-slider">
+  <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1581091215364-4885f558ef50?auto=format&fit=crop&w=1600&q=80');">
+    <div class="overlay">
+      <h1>Reliable Global Shipping</h1>
+      <p>Delivering goods worldwide for over 10 years from Manchester, England</p>
+      <a href="tracking.html" class="btn-primary">Track Your Shipment</a>
+    </div>
+  </div>
+  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1592520030647-5c8cfb96f6f8?auto=format&fit=crop&w=1600&q=80');">
+    <div class="overlay">
+      <h1>Packages Handled with Care</h1>
+      <p>Professional team ensuring safe delivery of all shipments.</p>
+      <a href="tracking.html" class="btn-primary">Track Your Shipment</a>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+  <h2>Why Choose Atlantic Crown?</h2>
+  <div class="feature-cards">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/004080/ship.png"/>
+      <h3>International Freight</h3>
+      <p>Fast and reliable global shipping for all cargo sizes.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/004080/express-delivery.png"/>
+      <h3>Express Delivery</h3>
+      <p>Next-day delivery for urgent shipments anywhere in the world.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/004080/customs.png"/>
+      <h3>Customs Assistance</h3>
+      <p>We handle customs clearance smoothly for international shipments.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Atlantic Crown Shipping | Manchester, England</p>
+</footer>
+
+<script>
+  // Hero slider animation
+  let slides = document.querySelectorAll('.hero-slider .slide');
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current+1)%slides.length;
+    slides[current].classList.add('active');
+  }, 7000);
+</script>
+</body>
+</html>
